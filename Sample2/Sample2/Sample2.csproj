@@ -1,0 +1,471 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0C2F1B0F-E88D-422D-98D6-BE3F9CCC348E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sample2</RootNamespace>
+    <AssemblyName>Sample2</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dbConnection.cs" />
+    <Compile Include="frmBackupRestore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBackupRestore.Designer.cs">
+      <DependentUpon>frmBackupRestore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmClientReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClientReport.Designer.cs">
+      <DependentUpon>frmClientReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDashboard.Designer.cs">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMSBDeleteInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMSBDeleteInfo.Designer.cs">
+      <DependentUpon>frmMSBDeleteInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmployee.Designer.cs">
+      <DependentUpon>frmEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClient.Designer.cs">
+      <DependentUpon>frmClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmployeeReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmployeeReport.Designer.cs">
+      <DependentUpon>frmEmployeeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLateReturnReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLateReturnReport.Designer.cs">
+      <DependentUpon>frmLateReturnReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManufacturing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManufacturing.Designer.cs">
+      <DependentUpon>frmManufacturing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMSBInfoDoesExist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMSBInfoDoesExist.Designer.cs">
+      <DependentUpon>frmMSBInfoDoesExist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMSBInfoDoesNotExist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMSBInfoDoesNotExist.Designer.cs">
+      <DependentUpon>frmMSBInfoDoesNotExist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMSBItemDoesExist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMSBItemDoesExist.Designer.cs">
+      <DependentUpon>frmMSBItemDoesExist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMSBItemDoesNotExist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMSBItemDoesNotExist.Designer.cs">
+      <DependentUpon>frmMSBItemDoesNotExist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMSBOrderAlreadyExist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMSBOrderAlreadyExist.Designer.cs">
+      <DependentUpon>frmMSBOrderAlreadyExist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMSBOrderCompleted.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMSBOrderCompleted.Designer.cs">
+      <DependentUpon>frmMSBOrderCompleted.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMSBOrderDoesNotExist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMSBOrderDoesNotExist.Designer.cs">
+      <DependentUpon>frmMSBOrderDoesNotExist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMSBPaswordDoesNotMatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMSBPaswordDoesNotMatch.Designer.cs">
+      <DependentUpon>frmMSBPaswordDoesNotMatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMSBPRoductDoesNotExist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMSBPRoductDoesNotExist.Designer.cs">
+      <DependentUpon>frmMSBPRoductDoesNotExist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMSBRequestUnsuccessfull.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMSBRequestUnsuccessfull.Designer.cs">
+      <DependentUpon>frmMSBRequestUnsuccessfull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMSBRMDoesNotExist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMSBRMDoesNotExist.Designer.cs">
+      <DependentUpon>frmMSBRMDoesNotExist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMSBSaveBeforeExiting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMSBSaveBeforeExiting.Designer.cs">
+      <DependentUpon>frmMSBSaveBeforeExiting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMSBSaveChanges.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMSBSaveChanges.Designer.cs">
+      <DependentUpon>frmMSBSaveChanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMSBSuccessfullyAdded.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMSBSuccessfullyAdded.Designer.cs">
+      <DependentUpon>frmMSBSuccessfullyAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMSBSuccessfullyDeleted.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMSBSuccessfullyDeleted.Designer.cs">
+      <DependentUpon>frmMSBSuccessfullyDeleted.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMSBSuccessfullySaved.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMSBSuccessfullySaved.Designer.cs">
+      <DependentUpon>frmMSBSuccessfullySaved.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMSBUsernameExist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMSBUsernameExist.Designer.cs">
+      <DependentUpon>frmMSBUsernameExist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMSBUsernameOrPasswordIncorrect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMSBUsernameOrPasswordIncorrect.Designer.cs">
+      <DependentUpon>frmMSBUsernameOrPasswordIncorrect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOrderStatusReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOrderStatusReport.Designer.cs">
+      <DependentUpon>frmOrderStatusReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductReport.Designer.cs">
+      <DependentUpon>frmProductReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRawMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRawMaterial.Designer.cs">
+      <DependentUpon>frmRawMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRawMaterialReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRawMaterialReport.Designer.cs">
+      <DependentUpon>frmRawMaterialReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRental.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRental.Designer.cs">
+      <DependentUpon>frmRental.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRentalReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRentalReport.Designer.cs">
+      <DependentUpon>frmRentalReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportingMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportingMain.Designer.cs">
+      <DependentUpon>frmReportingMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSale.Designer.cs">
+      <DependentUpon>frmSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStock.Designer.cs">
+      <DependentUpon>frmStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSupplier.Designer.cs">
+      <DependentUpon>frmSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSupplierReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSupplierReport.Designer.cs">
+      <DependentUpon>frmSupplierReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserAccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserAccess.Designer.cs">
+      <DependentUpon>frmUserAccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GetGlamDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GetGlamDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmBackupRestore.resx">
+      <DependentUpon>frmBackupRestore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClientReport.resx">
+      <DependentUpon>frmClientReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDashboard.aa.resx">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDashboard.resx">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmployee.resx">
+      <DependentUpon>frmEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClient.resx">
+      <DependentUpon>frmClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmployeeReport.resx">
+      <DependentUpon>frmEmployeeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLateReturnReport.resx">
+      <DependentUpon>frmLateReturnReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManufacturing.resx">
+      <DependentUpon>frmManufacturing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMSBDeleteInfo.resx">
+      <DependentUpon>frmMSBDeleteInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMSBInfoDoesExist.resx">
+      <DependentUpon>frmMSBInfoDoesExist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMSBInfoDoesNotExist.resx">
+      <DependentUpon>frmMSBInfoDoesNotExist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMSBItemDoesExist.resx">
+      <DependentUpon>frmMSBItemDoesExist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMSBItemDoesNotExist.resx">
+      <DependentUpon>frmMSBItemDoesNotExist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMSBOrderAlreadyExist.resx">
+      <DependentUpon>frmMSBOrderAlreadyExist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMSBOrderCompleted.resx">
+      <DependentUpon>frmMSBOrderCompleted.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMSBOrderDoesNotExist.resx">
+      <DependentUpon>frmMSBOrderDoesNotExist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMSBPaswordDoesNotMatch.resx">
+      <DependentUpon>frmMSBPaswordDoesNotMatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMSBPRoductDoesNotExist.resx">
+      <DependentUpon>frmMSBPRoductDoesNotExist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMSBRequestUnsuccessfull.resx">
+      <DependentUpon>frmMSBRequestUnsuccessfull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMSBRMDoesNotExist.resx">
+      <DependentUpon>frmMSBRMDoesNotExist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMSBSaveBeforeExiting.resx">
+      <DependentUpon>frmMSBSaveBeforeExiting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMSBSaveChanges.resx">
+      <DependentUpon>frmMSBSaveChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMSBSuccessfullyAdded.resx">
+      <DependentUpon>frmMSBSuccessfullyAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMSBSuccessfullyDeleted.resx">
+      <DependentUpon>frmMSBSuccessfullyDeleted.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMSBSuccessfullySaved.resx">
+      <DependentUpon>frmMSBSuccessfullySaved.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMSBUsernameExist.resx">
+      <DependentUpon>frmMSBUsernameExist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMSBUsernameOrPasswordIncorrect.resx">
+      <DependentUpon>frmMSBUsernameOrPasswordIncorrect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOrderStatusReport.resx">
+      <DependentUpon>frmOrderStatusReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductReport.resx">
+      <DependentUpon>frmProductReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRawMaterial.resx">
+      <DependentUpon>frmRawMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRawMaterialReport.resx">
+      <DependentUpon>frmRawMaterialReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRental.resx">
+      <DependentUpon>frmRental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRentalReport.resx">
+      <DependentUpon>frmRentalReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportingMain.resx">
+      <DependentUpon>frmReportingMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSale.resx">
+      <DependentUpon>frmSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStock.resx">
+      <DependentUpon>frmStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSupplier.resx">
+      <DependentUpon>frmSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSupplierReport.resx">
+      <DependentUpon>frmSupplierReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserAccess.resx">
+      <DependentUpon>frmUserAccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="GetGlamDataSet1.xsc">
+      <DependentUpon>GetGlamDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GetGlamDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GetGlamDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GetGlamDataSet1.xss">
+      <DependentUpon>GetGlamDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\success-icon-7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
