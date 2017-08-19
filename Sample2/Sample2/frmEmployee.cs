@@ -107,7 +107,37 @@ namespace Sample2
             frmRawMat.ShowDialog();
         }
 
-        private void button17_Click(object sender, EventArgs e)
+        private void buttonAddEmployee_click(object sender, EventArgs e)
+        {
+            try
+            {
+                employee emp = new employee();
+                emp.EmployeeId = 1;//Convert.ToInt32(textBox3.Text);
+                emp.Firstname = textBox9.Text;
+                emp.Surname = textBox8.Text;
+                emp.CellphoneNumber = textBox4.Text;
+                emp.Address = textBox6.Text;
+                emp.EmailAddress = textBox7.Text;
+
+                new dbHelper().createEmployee(emp);
+                MessageBox.Show("New Employee succesfully added!");
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void textBox9_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

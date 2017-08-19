@@ -44,7 +44,7 @@
             this.button12 = new System.Windows.Forms.Button();
             this.AddNewEmployee = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button17 = new System.Windows.Forms.Button();
+            this.buttonAddEmployee = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -265,7 +265,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.button17);
+            this.tabPage1.Controls.Add(this.buttonAddEmployee);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.textBox3);
             this.tabPage1.Controls.Add(this.label4);
@@ -277,18 +277,18 @@
             this.tabPage1.Text = "Add New Employee";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // button17
+            // buttonAddEmployee
             // 
-            this.button17.BackColor = System.Drawing.Color.Black;
-            this.button17.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button17.ForeColor = System.Drawing.Color.White;
-            this.button17.Location = new System.Drawing.Point(460, 465);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(141, 36);
-            this.button17.TabIndex = 6;
-            this.button17.Text = "Add Employee";
-            this.button17.UseVisualStyleBackColor = false;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
+            this.buttonAddEmployee.BackColor = System.Drawing.Color.Black;
+            this.buttonAddEmployee.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddEmployee.ForeColor = System.Drawing.Color.White;
+            this.buttonAddEmployee.Location = new System.Drawing.Point(460, 465);
+            this.buttonAddEmployee.Name = "buttonAddEmployee";
+            this.buttonAddEmployee.Size = new System.Drawing.Size(141, 36);
+            this.buttonAddEmployee.TabIndex = 6;
+            this.buttonAddEmployee.Text = "Add Employee";
+            this.buttonAddEmployee.UseVisualStyleBackColor = false;
+            this.buttonAddEmployee.Click += new System.EventHandler(this.buttonAddEmployee_click);
             // 
             // groupBox2
             // 
@@ -344,6 +344,7 @@
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(127, 25);
             this.textBox9.TabIndex = 6;
+            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
             // label9
             // 
@@ -364,6 +365,7 @@
             this.label8.Size = new System.Drawing.Size(88, 17);
             this.label8.TabIndex = 4;
             this.label8.Text = "First Name:";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label7
             // 
@@ -466,6 +468,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(645, 287);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Column1
             // 
@@ -673,7 +676,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button buttonAddEmployee;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;

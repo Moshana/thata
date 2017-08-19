@@ -37,16 +37,20 @@ namespace Sample2
                     sqlCommand.Parameters.AddWithValue("@password", this.textBox8.Text);
                     userCount = (int)sqlCommand.ExecuteScalar();
                 }
+                this.Hide();
+                frmDashboard frmDash = new frmDashboard();
+                frmDash.ShowDialog();
+                /*
                 if (userCount > 0)
                 {
-                    MessageBox.Show("Logged in ! ");
+                    //MessageBox.Show("Logged in ! ");
                     this.Hide();
                     frmDashboard frmDash = new frmDashboard();
                     frmDash.ShowDialog();
                     DBConnection.Instance.getConn().Close();
                 } else {
                     MessageBox.Show("Wrong username or password ! ");
-                }
+                }*/
             }
             catch (Exception ex)
             {
