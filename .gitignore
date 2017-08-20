@@ -154,3 +154,19 @@ $RECYCLE.BIN/
 
 # Mac desktop service store files
 .DS_Store
+
+.vs/
+developerAppSettings.json
+.vscode
+dist
+.tmp
+node_modules
+bin
+obj
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.dll
+packages/

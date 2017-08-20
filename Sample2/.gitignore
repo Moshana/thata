@@ -1,0 +1,20 @@
+# Visual Studio 2015 cache/options directory
+.vs/
+developerAppSettings.json
+docker-dev-variables.env
+.vscode
+dist
+.tmp
+/arkanoid.web/*.log
+node_modules
+bin
+obj
+/arkanoid.data/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*/.vs/arkanoid/v15/.suo
+/arkanoid.service.common.db/appsettings.override.json

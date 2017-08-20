@@ -21,7 +21,7 @@ namespace Sample2
         private void button17_Click(object sender, EventArgs e)
         {
             DBConnection.Instance.getConn();
-            string connetionString = "SELECT COUNT(*) from users where user_name like 'Adam' AND password like '123456'";
+            //string connetionString = "SELECT COUNT(*) from users where user_name like 'Adam' AND password like '123456'";
             ///SqlConnection cnn;"
             //connetionString = "Data Source=(local);Initial Catalog=Glam;User ID="+this.textBox9.Text+";Password="+this.textBox8.Text;
             //cnn = new SqlConnection(connetionString);
@@ -37,10 +37,10 @@ namespace Sample2
                     sqlCommand.Parameters.AddWithValue("@password", this.textBox8.Text);
                     userCount = (int)sqlCommand.ExecuteScalar();
                 }
-                this.Hide();
-                frmDashboard frmDash = new frmDashboard();
-                frmDash.ShowDialog();
-                /*
+                //this.Hide();
+                //frmDashboard frmDash = new frmDashboard();
+                //frmDash.ShowDialog();
+                
                 if (userCount > 0)
                 {
                     //MessageBox.Show("Logged in ! ");
@@ -50,9 +50,9 @@ namespace Sample2
                     DBConnection.Instance.getConn().Close();
                 } else {
                     MessageBox.Show("Wrong username or password ! ");
-                }*/
+                }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Login Failure ! ");
             }

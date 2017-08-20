@@ -111,13 +111,13 @@ namespace Sample2
         {
             try
             {
-                employee emp = new employee();
-                emp.EmployeeId = 1;//Convert.ToInt32(textBox3.Text);
-                emp.Firstname = textBox9.Text;
-                emp.Surname = textBox8.Text;
-                emp.CellphoneNumber = textBox4.Text;
-                emp.Address = textBox6.Text;
-                emp.EmailAddress = textBox7.Text;
+                Employee emp = new Employee();
+                //emp.EmployeeId = 1;//Convert.ToInt32(textBox3.Text);
+                emp.EmployeeName = textBox9.Text;
+                emp.EmployeeSurname = textBox8.Text;
+                emp.EmployeePhone = textBox4.Text;
+                emp.EmployeeAddress = textBox6.Text;
+                emp.EmployeeEmail = textBox7.Text;
 
                 new dbHelper().createEmployee(emp);
                 MessageBox.Show("New Employee succesfully added!");
@@ -140,6 +140,24 @@ namespace Sample2
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dbHelper dbh = new dbHelper();
+                Employee emp = new Employee();
+                emp.EmployeeName = this.textBox1.Text;
+                emp.EmployeeSurname = this.textBox2.Text;
+
+                DataSet empdata = dbh.getEmployee(emp);
+                //this.dataGridView1.AutoGenerateColumns = false;
+                this.dataGridView1.DataSource = empdata.Tables[0];
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
