@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,8 @@ namespace Sample2
 {
     public partial class frmEmployee : Form
     {
+        BindingList<Employee> bindingList;// = context.Employees.Local.ToBindingList();
+        BindingSource ordersBindingSource;// = new BindingSource();
         public frmEmployee()
         {
             InitializeComponent();
@@ -144,16 +147,49 @@ namespace Sample2
 
         private void button14_Click(object sender, EventArgs e)
         {
+            
+
             try
             {
-                dbHelper dbh = new dbHelper();
-                Employee emp = new Employee();
-                emp.EmployeeName = this.textBox1.Text;
-                emp.EmployeeSurname = this.textBox2.Text;
+                var context = new GlamDataContext();
+                context.Employees.Load();
+                bindingList = context.Employees.Local.ToBindingList();
+                ordersBindingSource = new BindingSource();
+                ordersBindingSource.DataSource = bindingList;
+                dataGridView1.DataSource = ordersBindingSource;
 
-                DataSet empdata = dbh.getEmployee(emp);
+                //dbHelper dbh = new dbHelper();
+                //Employee emp = new Employee();
+                //emp.EmployeeName = this.textBox1.Text;
+                //emp.EmployeeSurname = this.textBox2.Text;
+
+                //var empdata = dbh.getEmployee(emp);
                 //this.dataGridView1.AutoGenerateColumns = false;
-                this.dataGridView1.DataSource = empdata.Tables[0];
+                //this.dataGridView1.DataSource = empdata;
+                this.dataGridView1.Columns[0].Visible = false;
+                this.dataGridView1.Columns["EmployeePassword"].Visible = false;
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var db = new GlamDataContext();
+
+                List<Employee> updateEmployees = new List<Employee>();
+                foreach(var employee in bindingList)
+                {
+                    var currentEmp = db.Employees.FirstOrDefault(u => u.EmployeeID == employee.EmployeeID);
+                    currentEmp.EmployeeName = employee.EmployeeName;
+                    currentEmp.EmployeeSurname = employee.EmployeeSurname;
+                    currentEmp.EmployeeAddress = employee.EmployeeAddress;
+                    db.SaveChanges();
+                }
+
             }
             catch (Exception ex) {
                 MessageBox.Show(ex.Message);

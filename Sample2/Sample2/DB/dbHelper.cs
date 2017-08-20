@@ -52,7 +52,14 @@ namespace Sample2
 
         }
 
-        public DataSet getEmployee(Employee emp) {
+        public List<Employee> getEmployee(Employee emp) {
+
+            //ef
+            var db = new GlamDataContext();
+            return db.Employees.ToList();
+
+
+            /*
             DBConnection.Instance.getConn();
      
                 var conn = DBConnection.Instance.getConn();
@@ -63,7 +70,7 @@ namespace Sample2
                 var ds = new DataSet();
                     dataAdapter.Fill(ds);
                     return ds;
-                }
+                }*/
         }
 
         public DataSet getAllEmployees()
