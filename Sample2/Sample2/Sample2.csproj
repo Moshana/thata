@@ -48,6 +48,8 @@
     <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -59,15 +61,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DB\Models\CLIENT.cs" />
+    <Compile Include="DB\Models\CLIENT_ORDER.cs" />
+    <Compile Include="C__MigrationHistory.cs" />
     <Compile Include="DB\dbConnection.cs" />
     <Compile Include="DB\dbHelper.cs" />
-    <Compile Include="DB\Models\Employee.cs" />
-    <Compile Include="DB\Models\EmployeeType.cs" />
-    <Compile Include="Migrations\201708201515521_AddEmployeeTable.cs" />
-    <Compile Include="Migrations\201708201515521_AddEmployeeTable.Designer.cs">
-      <DependentUpon>201708201515521_AddEmployeeTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="DB\Models\EMPLOYEE.cs" />
+    <Compile Include="DB\Models\EMPLOYEE_TYPE.cs" />
+    <Compile Include="DB\Models\FITTING.cs" />
+    <Compile Include="DB\Models\GARMENT.cs" />
+    <Compile Include="DB\Models\GARMENT_TYPE.cs" />
+    <Compile Include="DB\GlamModel.cs" />
+    <Compile Include="DB\Models\LATE_RETURN.cs" />
+    <Compile Include="DB\Models\ORDER_STATUS.cs" />
+    <Compile Include="DB\Models\ORDER_TYPE.cs" />
+    <Compile Include="DB\Models\PRODUCT.cs" />
+    <Compile Include="DB\Models\PRODUCT_TYPE.cs" />
+    <Compile Include="DB\Models\RAW_MATERIAL.cs" />
+    <Compile Include="DB\Models\RAW_MATERIAL_TYPE.cs" />
+    <Compile Include="DB\Models\RENTAL.cs" />
+    <Compile Include="DB\Models\RENTAL_STATUS.cs" />
+    <Compile Include="DB\Models\SALE.cs" />
+    <Compile Include="DB\Models\SALE_RETURN.cs" />
+    <Compile Include="DB\Models\SUPPLIER.cs" />
+    <Compile Include="DB\Models\SUPPLIER_ORDER.cs" />
+    <Compile Include="DB\Models\SUPPLIER_ORDER_STATUS.cs" />
+    <Compile Include="DB\Models\SUPPLIER_PRODUCT_RETURN.cs" />
+    <Compile Include="DB\Models\SUPPLIER_RAW_MATERIAL_RETURN.cs" />
     <Compile Include="UI\frmBackupRestore.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -314,11 +334,8 @@
       <DependentUpon>GetGlamDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="DB\GlamDataContext.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="DB\Models\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Migrations\201708201515521_AddEmployeeTable.resx">
-      <DependentUpon>201708201515521_AddEmployeeTable.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UI\frmBackupRestore.resx">
       <DependentUpon>frmBackupRestore.cs</DependentUpon>
     </EmbeddedResource>

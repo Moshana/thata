@@ -13,7 +13,7 @@ namespace Sample2
 {
     public partial class frmEmployee : Form
     {
-        BindingList<Employee> bindingList;// = context.Employees.Local.ToBindingList();
+        BindingList<EMPLOYEE> bindingList;// = context.Employees.Local.ToBindingList();
         BindingSource ordersBindingSource;// = new BindingSource();
         public frmEmployee()
         {
@@ -114,11 +114,11 @@ namespace Sample2
         {
             try
             {
-                Employee emp = new Employee();
+                EMPLOYEE emp = new EMPLOYEE();
                 //emp.EmployeeId = 1;//Convert.ToInt32(textBox3.Text);
                 emp.EmployeeName = textBox9.Text;
                 emp.EmployeeSurname = textBox8.Text;
-                emp.EmployeePhone = textBox4.Text;
+                emp.EmployeePhone = Convert.ToInt32(textBox4.Text);
                 emp.EmployeeAddress = textBox6.Text;
                 emp.EmployeeEmail = textBox7.Text;
 
@@ -151,9 +151,9 @@ namespace Sample2
 
             try
             {
-                var context = new GlamDataContext();
-                context.Employees.Load();
-                bindingList = context.Employees.Local.ToBindingList();
+                var context = new GlamModel();
+                context.EMPLOYEEs.Load();
+                bindingList = context.EMPLOYEEs.Local.ToBindingList();
                 ordersBindingSource = new BindingSource();
                 ordersBindingSource.DataSource = bindingList;
                 dataGridView1.DataSource = ordersBindingSource;
@@ -178,12 +178,12 @@ namespace Sample2
         {
             try
             {
-                var db = new GlamDataContext();
+                var db = new GlamModel();
 
-                List<Employee> updateEmployees = new List<Employee>();
+                List<EMPLOYEE> updateEmployees = new List<EMPLOYEE>();
                 foreach(var employee in bindingList)
                 {
-                    var currentEmp = db.Employees.FirstOrDefault(u => u.EmployeeID == employee.EmployeeID);
+                    var currentEmp = db.EMPLOYEEs.FirstOrDefault(u => u.EmployeeID == employee.EmployeeID);
                     currentEmp.EmployeeName = employee.EmployeeName;
                     currentEmp.EmployeeSurname = employee.EmployeeSurname;
                     currentEmp.EmployeeAddress = employee.EmployeeAddress;

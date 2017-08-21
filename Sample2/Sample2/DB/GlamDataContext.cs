@@ -15,9 +15,6 @@ namespace Sample2
             //Database.Migrate();
         }
 
-        public DbSet<Employee> Employees { get; set; }
-        public DbSet<EmployeeType> EmployeeType { get; set; }
-
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
         }

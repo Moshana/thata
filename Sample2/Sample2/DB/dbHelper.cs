@@ -25,11 +25,11 @@ namespace Sample2
           EmailAddress 
           Address 
          */
-        public void createEmployee(Employee emp)
+        public void createEmployee(EMPLOYEE emp)
         {
             //using EF
-            var db = new GlamDataContext();
-            db.Employees.Add(emp);
+            var db = new GlamModel();
+            db.EMPLOYEEs.Add(emp);
             db.SaveChanges();
 
             //DOING MANUAL WAY
@@ -52,11 +52,11 @@ namespace Sample2
 
         }
 
-        public List<Employee> getEmployee(Employee emp) {
+        public List<EMPLOYEE> getEmployee(EMPLOYEE emp) {
 
             //ef
-            var db = new GlamDataContext();
-            return db.Employees.ToList();
+            var db = new GlamModel();
+            return db.EMPLOYEEs.ToList();
 
 
             /*
