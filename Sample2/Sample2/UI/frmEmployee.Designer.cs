@@ -266,7 +266,7 @@
             this.buttonAddEmployee.BackColor = System.Drawing.Color.Black;
             this.buttonAddEmployee.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAddEmployee.ForeColor = System.Drawing.Color.White;
-            this.buttonAddEmployee.Location = new System.Drawing.Point(460, 465);
+            this.buttonAddEmployee.Location = new System.Drawing.Point(460, 464);
             this.buttonAddEmployee.Name = "buttonAddEmployee";
             this.buttonAddEmployee.Size = new System.Drawing.Size(141, 36);
             this.buttonAddEmployee.TabIndex = 6;

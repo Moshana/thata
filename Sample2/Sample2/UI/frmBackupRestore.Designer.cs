@@ -46,19 +46,19 @@
             this.BackupRestore = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button19 = new System.Windows.Forms.Button();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.BackupButton = new System.Windows.Forms.Button();
+            this.BackupToDateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.BackupFromDateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button17 = new System.Windows.Forms.Button();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.BackupSearch = new System.Windows.Forms.Button();
+            this.BackupLocation = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.buttonResoreSystem = new System.Windows.Forms.Button();
+            this.buttonSearch = new System.Windows.Forms.Button();
+            this.textBoxRestoreFromLocation = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
@@ -273,13 +273,13 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button19);
-            this.groupBox2.Controls.Add(this.dateTimePicker3);
-            this.groupBox2.Controls.Add(this.dateTimePicker2);
+            this.groupBox2.Controls.Add(this.BackupButton);
+            this.groupBox2.Controls.Add(this.BackupToDateTimePicker3);
+            this.groupBox2.Controls.Add(this.BackupFromDateTimePicker2);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.button17);
-            this.groupBox2.Controls.Add(this.textBox9);
+            this.groupBox2.Controls.Add(this.BackupSearch);
+            this.groupBox2.Controls.Add(this.BackupLocation);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(80, 56);
@@ -289,33 +289,33 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Backup Details";
             // 
-            // button19
+            // BackupButton
             // 
-            this.button19.BackColor = System.Drawing.Color.Black;
-            this.button19.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button19.ForeColor = System.Drawing.Color.White;
-            this.button19.Location = new System.Drawing.Point(382, 273);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(141, 36);
-            this.button19.TabIndex = 80;
-            this.button19.Text = "Backup";
-            this.button19.UseVisualStyleBackColor = false;
+            this.BackupButton.BackColor = System.Drawing.Color.Black;
+            this.BackupButton.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackupButton.ForeColor = System.Drawing.Color.White;
+            this.BackupButton.Location = new System.Drawing.Point(382, 273);
+            this.BackupButton.Name = "BackupButton";
+            this.BackupButton.Size = new System.Drawing.Size(141, 36);
+            this.BackupButton.TabIndex = 80;
+            this.BackupButton.Text = "Backup";
+            this.BackupButton.UseVisualStyleBackColor = false;
             // 
-            // dateTimePicker3
+            // BackupToDateTimePicker3
             // 
-            this.dateTimePicker3.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker3.Location = new System.Drawing.Point(205, 220);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(212, 22);
-            this.dateTimePicker3.TabIndex = 79;
+            this.BackupToDateTimePicker3.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackupToDateTimePicker3.Location = new System.Drawing.Point(205, 220);
+            this.BackupToDateTimePicker3.Name = "BackupToDateTimePicker3";
+            this.BackupToDateTimePicker3.Size = new System.Drawing.Size(212, 22);
+            this.BackupToDateTimePicker3.TabIndex = 79;
             // 
-            // dateTimePicker2
+            // BackupFromDateTimePicker2
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(205, 179);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(212, 22);
-            this.dateTimePicker2.TabIndex = 78;
+            this.BackupFromDateTimePicker2.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackupFromDateTimePicker2.Location = new System.Drawing.Point(205, 179);
+            this.BackupFromDateTimePicker2.Name = "BackupFromDateTimePicker2";
+            this.BackupFromDateTimePicker2.Size = new System.Drawing.Size(212, 22);
+            this.BackupFromDateTimePicker2.TabIndex = 78;
             // 
             // label5
             // 
@@ -337,24 +337,24 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Backup from date:";
             // 
-            // button17
+            // BackupSearch
             // 
-            this.button17.BackColor = System.Drawing.Color.Black;
-            this.button17.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button17.ForeColor = System.Drawing.Color.White;
-            this.button17.Location = new System.Drawing.Point(382, 110);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(141, 36);
-            this.button17.TabIndex = 7;
-            this.button17.Text = "Search";
-            this.button17.UseVisualStyleBackColor = false;
+            this.BackupSearch.BackColor = System.Drawing.Color.Black;
+            this.BackupSearch.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackupSearch.ForeColor = System.Drawing.Color.White;
+            this.BackupSearch.Location = new System.Drawing.Point(382, 110);
+            this.BackupSearch.Name = "BackupSearch";
+            this.BackupSearch.Size = new System.Drawing.Size(141, 36);
+            this.BackupSearch.TabIndex = 7;
+            this.BackupSearch.Text = "Search";
+            this.BackupSearch.UseVisualStyleBackColor = false;
             // 
-            // textBox9
+            // BackupLocation
             // 
-            this.textBox9.Location = new System.Drawing.Point(193, 56);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(330, 25);
-            this.textBox9.TabIndex = 6;
+            this.BackupLocation.Location = new System.Drawing.Point(193, 56);
+            this.BackupLocation.Name = "BackupLocation";
+            this.BackupLocation.Size = new System.Drawing.Size(330, 25);
+            this.BackupLocation.TabIndex = 6;
             // 
             // label8
             // 
@@ -372,16 +372,16 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1023, 584);
+            this.tabPage2.Size = new System.Drawing.Size(1023, 621);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Restore";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button14);
-            this.groupBox1.Controls.Add(this.button15);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.buttonResoreSystem);
+            this.groupBox1.Controls.Add(this.buttonSearch);
+            this.groupBox1.Controls.Add(this.textBoxRestoreFromLocation);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(74, 70);
@@ -391,36 +391,36 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Restore Details";
             // 
-            // button14
+            // buttonResoreSystem
             // 
-            this.button14.BackColor = System.Drawing.Color.Black;
-            this.button14.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.ForeColor = System.Drawing.Color.White;
-            this.button14.Location = new System.Drawing.Point(382, 178);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(141, 36);
-            this.button14.TabIndex = 8;
-            this.button14.Text = "Restore system";
-            this.button14.UseVisualStyleBackColor = false;
+            this.buttonResoreSystem.BackColor = System.Drawing.Color.Black;
+            this.buttonResoreSystem.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonResoreSystem.ForeColor = System.Drawing.Color.White;
+            this.buttonResoreSystem.Location = new System.Drawing.Point(382, 178);
+            this.buttonResoreSystem.Name = "buttonResoreSystem";
+            this.buttonResoreSystem.Size = new System.Drawing.Size(141, 36);
+            this.buttonResoreSystem.TabIndex = 8;
+            this.buttonResoreSystem.Text = "Restore system";
+            this.buttonResoreSystem.UseVisualStyleBackColor = false;
             // 
-            // button15
+            // buttonSearch
             // 
-            this.button15.BackColor = System.Drawing.Color.Black;
-            this.button15.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.ForeColor = System.Drawing.Color.White;
-            this.button15.Location = new System.Drawing.Point(382, 110);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(141, 36);
-            this.button15.TabIndex = 7;
-            this.button15.Text = "Search";
-            this.button15.UseVisualStyleBackColor = false;
+            this.buttonSearch.BackColor = System.Drawing.Color.Black;
+            this.buttonSearch.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSearch.ForeColor = System.Drawing.Color.White;
+            this.buttonSearch.Location = new System.Drawing.Point(382, 110);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(141, 36);
+            this.buttonSearch.TabIndex = 7;
+            this.buttonSearch.Text = "Search";
+            this.buttonSearch.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // textBoxRestoreFromLocation
             // 
-            this.textBox1.Location = new System.Drawing.Point(193, 56);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(330, 25);
-            this.textBox1.TabIndex = 6;
+            this.textBoxRestoreFromLocation.Location = new System.Drawing.Point(193, 56);
+            this.textBoxRestoreFromLocation.Name = "textBoxRestoreFromLocation";
+            this.textBoxRestoreFromLocation.Size = new System.Drawing.Size(330, 25);
+            this.textBoxRestoreFromLocation.TabIndex = 6;
             // 
             // label6
             // 
@@ -509,21 +509,21 @@
         private System.Windows.Forms.TabControl BackupRestore;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox BackupLocation;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Button BackupButton;
+        private System.Windows.Forms.DateTimePicker BackupToDateTimePicker3;
+        private System.Windows.Forms.DateTimePicker BackupFromDateTimePicker2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button BackupSearch;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button buttonResoreSystem;
+        private System.Windows.Forms.Button buttonSearch;
+        private System.Windows.Forms.TextBox textBoxRestoreFromLocation;
         private System.Windows.Forms.Label label6;
     }
 }

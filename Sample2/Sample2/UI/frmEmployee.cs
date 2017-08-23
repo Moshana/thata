@@ -122,7 +122,11 @@ namespace Sample2
                 emp.EmployeeAddress = textBox6.Text;
                 emp.EmployeeEmail = textBox7.Text;
 
-                new dbHelper().createEmployee(emp);
+                // new dbHelper().createEmployee(emp);
+                var db = new GlamModel();
+                db.EMPLOYEEs.Add(emp);
+
+                db.SaveChanges();
                 MessageBox.Show("New Employee succesfully added!");
             }
             catch (Exception ex) {
@@ -158,14 +162,6 @@ namespace Sample2
                 ordersBindingSource.DataSource = bindingList;
                 dataGridView1.DataSource = ordersBindingSource;
 
-                //dbHelper dbh = new dbHelper();
-                //Employee emp = new Employee();
-                //emp.EmployeeName = this.textBox1.Text;
-                //emp.EmployeeSurname = this.textBox2.Text;
-
-                //var empdata = dbh.getEmployee(emp);
-                //this.dataGridView1.AutoGenerateColumns = false;
-                //this.dataGridView1.DataSource = empdata;
                 this.dataGridView1.Columns[0].Visible = false;
                 this.dataGridView1.Columns["EmployeePassword"].Visible = false;
             }

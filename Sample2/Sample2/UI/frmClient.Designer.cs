@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmClient));
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxClientID = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button18 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
@@ -46,10 +46,10 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBoxClientPhoneNumer = new System.Windows.Forms.TextBox();
+            this.textBoxClientEmail = new System.Windows.Forms.TextBox();
+            this.textBoxClientSurname = new System.Windows.Forms.TextBox();
+            this.textBoxClientFirstname = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -80,7 +80,7 @@
             this.textBox23 = new System.Windows.Forms.TextBox();
             this.textBox22 = new System.Windows.Forms.TextBox();
             this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.textBoxClientNeck = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
@@ -158,13 +158,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox3
+            // textBoxClientID
             // 
-            this.textBox3.Location = new System.Drawing.Point(194, 61);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(127, 23);
-            this.textBox3.TabIndex = 4;
+            this.textBoxClientID.Location = new System.Drawing.Point(194, 61);
+            this.textBoxClientID.Name = "textBoxClientID";
+            this.textBoxClientID.ReadOnly = true;
+            this.textBoxClientID.Size = new System.Drawing.Size(127, 23);
+            this.textBoxClientID.TabIndex = 4;
             // 
             // tabPage2
             // 
@@ -176,7 +176,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1023, 584);
+            this.tabPage2.Size = new System.Drawing.Size(1023, 621);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Search/Maintain Client";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -322,33 +322,33 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Name:";
             // 
-            // textBox4
+            // textBoxClientPhoneNumer
             // 
-            this.textBox4.Location = new System.Drawing.Point(258, 149);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(127, 25);
-            this.textBox4.TabIndex = 6;
+            this.textBoxClientPhoneNumer.Location = new System.Drawing.Point(258, 149);
+            this.textBoxClientPhoneNumer.Name = "textBoxClientPhoneNumer";
+            this.textBoxClientPhoneNumer.Size = new System.Drawing.Size(127, 25);
+            this.textBoxClientPhoneNumer.TabIndex = 6;
             // 
-            // textBox6
+            // textBoxClientEmail
             // 
-            this.textBox6.Location = new System.Drawing.Point(258, 197);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(127, 25);
-            this.textBox6.TabIndex = 8;
+            this.textBoxClientEmail.Location = new System.Drawing.Point(258, 197);
+            this.textBoxClientEmail.Name = "textBoxClientEmail";
+            this.textBoxClientEmail.Size = new System.Drawing.Size(127, 25);
+            this.textBoxClientEmail.TabIndex = 8;
             // 
-            // textBox8
+            // textBoxClientSurname
             // 
-            this.textBox8.Location = new System.Drawing.Point(258, 101);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(127, 25);
-            this.textBox8.TabIndex = 10;
+            this.textBoxClientSurname.Location = new System.Drawing.Point(258, 101);
+            this.textBoxClientSurname.Name = "textBoxClientSurname";
+            this.textBoxClientSurname.Size = new System.Drawing.Size(127, 25);
+            this.textBoxClientSurname.TabIndex = 10;
             // 
-            // textBox9
+            // textBoxClientFirstname
             // 
-            this.textBox9.Location = new System.Drawing.Point(258, 56);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(127, 25);
-            this.textBox9.TabIndex = 6;
+            this.textBoxClientFirstname.Location = new System.Drawing.Point(258, 56);
+            this.textBoxClientFirstname.Name = "textBoxClientFirstname";
+            this.textBoxClientFirstname.Size = new System.Drawing.Size(127, 25);
+            this.textBoxClientFirstname.TabIndex = 6;
             // 
             // label9
             // 
@@ -420,7 +420,7 @@
             this.tabPage1.Controls.Add(this.groupBox3);
             this.tabPage1.Controls.Add(this.button17);
             this.tabPage1.Controls.Add(this.groupBox2);
-            this.tabPage1.Controls.Add(this.textBox3);
+            this.tabPage1.Controls.Add(this.textBoxClientID);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
@@ -454,7 +454,7 @@
             this.groupBox3.Controls.Add(this.textBox23);
             this.groupBox3.Controls.Add(this.textBox22);
             this.groupBox3.Controls.Add(this.textBox21);
-            this.groupBox3.Controls.Add(this.textBox20);
+            this.groupBox3.Controls.Add(this.textBoxClientNeck);
             this.groupBox3.Controls.Add(this.label40);
             this.groupBox3.Controls.Add(this.label39);
             this.groupBox3.Controls.Add(this.label38);
@@ -647,12 +647,12 @@
             this.textBox21.Size = new System.Drawing.Size(75, 26);
             this.textBox21.TabIndex = 117;
             // 
-            // textBox20
+            // textBoxClientNeck
             // 
-            this.textBox20.Location = new System.Drawing.Point(140, 38);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(75, 26);
-            this.textBox20.TabIndex = 116;
+            this.textBoxClientNeck.Location = new System.Drawing.Point(140, 38);
+            this.textBoxClientNeck.Name = "textBoxClientNeck";
+            this.textBoxClientNeck.Size = new System.Drawing.Size(75, 26);
+            this.textBoxClientNeck.TabIndex = 116;
             // 
             // label40
             // 
@@ -731,10 +731,10 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Controls.Add(this.textBox6);
-            this.groupBox2.Controls.Add(this.textBox8);
-            this.groupBox2.Controls.Add(this.textBox9);
+            this.groupBox2.Controls.Add(this.textBoxClientPhoneNumer);
+            this.groupBox2.Controls.Add(this.textBoxClientEmail);
+            this.groupBox2.Controls.Add(this.textBoxClientSurname);
+            this.groupBox2.Controls.Add(this.textBoxClientFirstname);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label7);
@@ -780,7 +780,7 @@
             this.tabPage3.Controls.Add(this.groupBox4);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1023, 584);
+            this.tabPage3.Size = new System.Drawing.Size(1023, 621);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Client Measurements";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1368,7 +1368,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxClientID;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button15;
@@ -1379,10 +1379,10 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBoxClientPhoneNumer;
+        private System.Windows.Forms.TextBox textBoxClientEmail;
+        private System.Windows.Forms.TextBox textBoxClientSurname;
+        private System.Windows.Forms.TextBox textBoxClientFirstname;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
@@ -1438,7 +1438,7 @@
         private System.Windows.Forms.TextBox textBox23;
         private System.Windows.Forms.TextBox textBox22;
         private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.TextBox textBoxClientNeck;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label38;
